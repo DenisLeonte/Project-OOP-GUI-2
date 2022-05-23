@@ -139,8 +139,8 @@ void GUIApp::on_FilterPriceButton_released()
 {
     if(ui->FilterPrice->text().isEmpty())
         return;
-    int price = ui->FilterPrice->text().toInt();
-    vector<pair<Item*,int>> rez = controller.filterTypeV(price);
+    float price = ui->FilterPrice->text().toFloat();
+    vector<pair<Item*,int>> rez = controller.filterPriceV(price);
     ui->ItemList->reset();
     for(auto& it: rez)
     {
