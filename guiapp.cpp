@@ -17,13 +17,19 @@ GUIApp::GUIApp(QWidget *parent)
     ui->itemComboBox->insertItem(7,"Case",Qt::UserRole);
     hideInputs();
     controller = CLIController(Shop("Denis"), "test.csv");
-    controller.init();
+    //try{
+    //controller.init();
+    //}
+    //catch(int)
+    //{
+    //    std::cerr<<"File Empty";
+    //}
 }
 
 GUIApp::~GUIApp()
 {
     delete ui;
-    controller.cleanUp();
+    //controller.cleanUp();
 }
 
 void GUIApp::on_refreshButton_released()
@@ -84,24 +90,33 @@ void GUIApp::on_LoadButton_released()
 
 void GUIApp::on_UndoButton_released()
 {
+    try{
     manager.undo(&controller);
+    }catch(int)
+    {
+        return;
+    }
 }
 
 void GUIApp::on_RedoButton_released()
 {
+    try{
     manager.redo(&controller);
+    }catch(int)
+    {
+        return;
+    }
 }
 
 
 void GUIApp::on_PrintAllButton_released()
 {
-    ui->ItemList->reset();
+    ui->ItemList->clear();
     Shop aux = controller.getShop();
     for(int i = 0; i < aux.getSz(); i++)
     {
-        QString temp;
-        temp.fromStdString(aux[i].first->toString());
-        ui->ItemList->addItem(temp);
+
+        ui->ItemList->addItem(QString::fromStdString(aux[i].first->toString()));
     }
 }
 
@@ -127,7 +142,7 @@ void GUIApp::on_FilterTypeButton_released()
         return;
     std::string type = ui->FilterType->text().toStdString();
     vector<pair<Item*,int>> rez = controller.filterTypeV(type);
-    ui->ItemList->reset();
+    ui->ItemList->clear();
     for(auto& it: rez)
     {
         ui->ItemList->addItem(QString::fromStdString(it.first->toString()));
@@ -141,7 +156,7 @@ void GUIApp::on_FilterPriceButton_released()
         return;
     float price = ui->FilterPrice->text().toFloat();
     vector<pair<Item*,int>> rez = controller.filterPriceV(price);
-    ui->ItemList->reset();
+    ui->ItemList->clear();
     for(auto& it: rez)
     {
         ui->ItemList->addItem(QString::fromStdString(it.first->toString()));
