@@ -29,7 +29,7 @@ GUIApp::GUIApp(QWidget *parent)
 GUIApp::~GUIApp()
 {
     delete ui;
-    //controller.cleanUp();
+    controller.cleanUp();
 }
 
 void GUIApp::on_refreshButton_released()

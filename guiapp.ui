@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>GUIApp</class>
  <widget class="QMainWindow" name="GUIApp">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>578</width>
-    <height>665</height>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +23,9 @@
    <widget class="QComboBox" name="itemComboBox">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>111</width>
+      <x>140</x>
+      <y>50</y>
+      <width>131</width>
       <height>24</height>
      </rect>
     </property>
@@ -31,8 +34,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>30</y>
-      <width>80</width>
+      <y>50</y>
+      <width>111</width>
       <height>24</height>
      </rect>
     </property>
@@ -47,7 +50,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>70</y>
+      <y>90</y>
       <width>251</width>
       <height>301</height>
      </rect>
@@ -220,8 +223,8 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>30</y>
-      <width>80</width>
+      <y>50</y>
+      <width>131</width>
       <height>24</height>
      </rect>
     </property>
@@ -233,7 +236,7 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>30</y>
+      <y>50</y>
       <width>113</width>
       <height>24</height>
      </rect>
@@ -243,8 +246,8 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>70</y>
-      <width>80</width>
+      <y>90</y>
+      <width>131</width>
       <height>24</height>
      </rect>
     </property>
@@ -256,8 +259,8 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>110</y>
-      <width>80</width>
+      <y>130</y>
+      <width>131</width>
       <height>24</height>
      </rect>
     </property>
@@ -269,7 +272,7 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>70</y>
+      <y>90</y>
       <width>113</width>
       <height>24</height>
      </rect>
@@ -279,7 +282,7 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>110</y>
+      <y>130</y>
       <width>113</width>
       <height>24</height>
      </rect>
@@ -289,7 +292,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>160</y>
+      <y>180</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -302,7 +305,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>220</y>
+      <y>240</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -315,7 +318,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>280</y>
+      <y>300</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -328,7 +331,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>340</y>
+      <y>360</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -341,7 +344,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>340</y>
+      <y>360</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -354,10 +357,28 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>400</y>
+      <y>420</y>
       <width>541</width>
       <height>221</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>541</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Denis PC Hardware Store Inventory Management System</string>
     </property>
    </widget>
   </widget>
